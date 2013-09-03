@@ -1,0 +1,70 @@
+﻿<html>	
+	<head>
+	</head>		
+	<body>
+		<h1>
+			Iniciando Extjs Primer ejemplo de Hola Mundo			
+		</h1>
+		<p>
+		Dentro de lo que es programación con javascript hay muchos Frameworks como son jquery, scriptaculus, etc., etc. En fin son muchos y tienen funcionalidades muy distintas el uno del otro, por tanto no es difícil encontrar una gran variedad de Frameworks; para todos los fines inimaginables, ahora claro hay muchos pero pocos destacan, un claro ejemplo de esto es Sencha Extjs, el cual nos permite hacer aplicaciones Web de tipo RIA (Rich Internet Application) este tipo de aplicaciones Web hechas con Sencha Extjs tienen un peculiar aspecto que es poder funcionar como una aplicación de escritorio con ventanas modales, grillas , graficas de reportes, formularios en ventana, entre otras muchas funciones.
+		</p>
+		<h2>
+			Instalacion de Extjs 4.2
+		</h2>
+		<p>
+			El modo de  instalacion es sencillo lo primero que debemos hacer es descargar nuestro framework lo cual lo podemos hacer desde la pagina sgte: http://www.sencha.com/products/extjs/download/, luego de haber descargado nuestro framework debemos descomprimir su contenido en una carpeta accesible desde donde podamos acceder facilmente. Es recomendable usar la version GPL, tambien hay una version comercial para fines didacticos se usara la version gpl para nuestras pruebas.
+		</p>
+		<h2>
+			Creacion de codigo hola Mundo
+		</h2>
+		<p>
+			Seguidamente en un directorio que este un nivel de la carpeta donde estan ubicados los archivos del framework Extjs procedemos a crear una carpeta que puede llamarse 01_sample donde crearemos un archivo html llamado sample.html donde redactaremos el siguiente codigo:			
+		</p>
+		<span lang="javascript">
+			&lt;html&gt;	
+				&lt;head&gt;
+					&lt;link rel="stylesheet" href="../extjs/resources/css/ext-all.css" type="text/css" /&gt;
+					&lt;script type="text/javascript" src="../extjs/ext-all.js"&gt;&lt;/script&gt;
+					&lt;script type="text/javascript" src="sample.js"&gt;&lt;/script&gt;
+				&lt;/head&gt;		
+				&lt;body&gt;
+				&lt;/body&gt;
+			&lt;/html&gt;
+		</span>
+		<p>
+		Luego redactamos en archivo js llamado sample.js desde donde se ejecutara las acciones que necesitamos para mostrar nuestro cuadro de dialogo donde se mostrara nuestro mensaje de Hola Mundo.
+		</p>
+		<span lang="javascript">
+			Ext.onReady(
+				function(){
+					Ext.Msg.show( 
+						{
+						   title:'Mensaje',
+						   msg: 'Hola mundo',
+						   buttons: Ext.MessageBox.OK,
+						   fn: function(){
+								console.log("esto funciona");
+								return;
+						   },
+						   icon: Ext.MessageBox.QUESTION
+						}
+					);
+					return;
+
+				}
+			);
+		</span>
+		<h2>
+			Visualizacion de Ejemplo
+		</h2>
+		<p>
+		Y por ultimo podremos ver al abrir la locacion del archivo sample.html en nuestro server de http, el dialogo de hola mundo deseado.
+		</p>
+		<h2>
+			Video de Youtube
+		</h2>
+		<p>
+			<iframe width="640" height="360" src="http://www.youtube.com/embed/gmp4JvE9xSg?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+		</p>
+	</body>
+</html>
